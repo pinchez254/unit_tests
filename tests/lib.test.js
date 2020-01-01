@@ -23,8 +23,16 @@ describe("greetings", () => {
   });
 });
 
+describe("testing arrays-currencies", () => {
+  it("should contain mentioned currencies", () => {
+    const result = lib.getCurrencies();
+    expect(result).toEqual(expect.arrayContaining(["USD", "AUD", "EUR"]));
+  });
+});
 
-describe('testing arrays-currencies', ()=>{
-  const result = lib.getCurrencies()
-  expect(result).toEqual(expect.arrayContaining(["USD", "AUD", "EUR"]))
-})
+describe("Test objects", () => {
+  it("should contain objects with id and price ", () => {
+    const result = lib.getProduct(1);
+    expect(result).toMatchObject({ id: 1, price: 10 });
+  });
+});
