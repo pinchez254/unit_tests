@@ -22,3 +22,9 @@ describe("greetings", () => {
     expect(result).toMatch(/pinchez/);
   });
 });
+
+
+describe('testing arrays-currencies', ()=>{
+  const result = lib.getCurrencies()
+  expect(result).toEqual(expect.arrayContaining(["USD", "AUD", "EUR"]))
+})
