@@ -15,3 +15,10 @@ describe("Absolute", () => {
     expect(result).toBe(0);
   });
 });
+
+describe("greetings", () => {
+  it("should return the greetings message", () => {
+    const result = lib.greet("pinchez");
+    expect(result).toMatch(/pinchez/);
+  });
+});
